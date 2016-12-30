@@ -4,8 +4,8 @@
 #include <thread>
 #include "libs/profiler.hpp"
 
-const long range_from=10000000l/10l;
-const long range_to=20000000l/10l;
+const long range_from=10000000l*10l;
+const long range_to=20000000l*10l;
 
 bool is_prime(long a)
 {
