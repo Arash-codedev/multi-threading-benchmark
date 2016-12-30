@@ -35,9 +35,9 @@ struct Result
 
 void twin_range(long n_start,long n_stop,int index,int processDiv,Result *presult)
 {
-	// l1+(0,1,...,1000)*1
-	// l1+(0,1,...,1000)*2
-	// l1+(0,1,...,1000)*3
+	// l1+(0,1,...,999)+0*1000
+	// l1+(0,1,...,999)+1*1000
+	// l1+(0,1,...,999)+2*1000
 	// ...
 
 	presult->checks=0;
