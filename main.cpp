@@ -40,6 +40,9 @@ void twin_range(long n_start,long n_stop,int index,int processDiv,Result *presul
 	// l1+(0,1,...,999)+2*1000
 	// ...
 
+	cronometer timer;
+	timer.tic();
+
 	presult->checks=0;
 	presult->found=0;
 	const long chunks=1000;
@@ -56,10 +59,13 @@ void twin_range(long n_start,long n_stop,int index,int processDiv,Result *presul
 			presult->checks++;
 		}
 	}
+	presult->exe_time=timer.toc();
+
 	std::cout
 		<<"Thread "<<index<<" finished task with "
 		<<(presult->checks)<<" checks and "
-		<<(presult->found)<<" results found"
+		<<(presult->found)<<" results found in "
+		<<(presult->exe_time)<<" seconds."
 		<<std::endl<<std::flush;
 }
 
